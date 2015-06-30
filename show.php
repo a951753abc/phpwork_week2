@@ -1,8 +1,10 @@
 <?php
 	$check_flag = 0;
-	$register_data = unserialize($_POST['data']);
-	if( ($_POST['login_account'] == $register_data['account']) && ($_POST['login_password'] == $register_data['password']) ){
-		$check_flag = 1;
+	if(isset($_POST)){
+		$register_data = unserialize($_POST['data']);
+		if( ($_POST['login_account'] == $register_data['account']) && ($_POST['login_password'] == $register_data['password']) ){
+			$check_flag = 1;
+		}
 	}
 ?>
 <!DOCTYPE html>
